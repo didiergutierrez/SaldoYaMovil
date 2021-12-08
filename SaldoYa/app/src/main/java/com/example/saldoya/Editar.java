@@ -54,7 +54,7 @@ public class Editar extends AppCompatActivity {
                 telefono= tie_telefono.getText().toString();
                 email= tie_email.getText().toString();
 
-                Intent intent=new Intent(Editar.this,Inicio.class);
+                Intent intent=new Intent(Editar.this,ListElement.class);
                 //Se carga la intensión(dato)
                 intent.putExtra("nombre",nombre);
                 intent.putExtra("tdocumento",tdocumento);
