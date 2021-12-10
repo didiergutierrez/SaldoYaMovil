@@ -28,5 +28,16 @@ public class OpcionesReg extends AppCompatActivity {
             }
         });
 
+        b_REmpresa=findViewById(R.id.b_REmpresa);
+
+
+        b_REmpresa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(OpcionesReg.this,R_Empresa.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
