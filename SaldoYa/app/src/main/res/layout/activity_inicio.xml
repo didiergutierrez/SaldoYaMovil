@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         app:startIconDrawable="@drawable/ic_punto"
         android:layout_marginTop="8dp"
-        android:hint=" Nombre Completo"
+        android:hint="Nombre Completo"
         app:endIconMode="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,35 +54,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_documento"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:startIconDrawable="@drawable/ic_punto"
-        android:layout_marginTop="8dp"
-        android:hint="Tipo de documento"
-        app:endIconMode="none"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_nombre"
-        app:layout_constraintVertical_bias="0.0"
-        app:startIconContentDescription="Tipo de documento">
-
-        <AutoCompleteTextView
-            android:id="@+id/actv_documento"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:enabled="false"
-            android:maxLines="1"
-            android:padding="8dp"
-            android:textColor="@color/teal_200"
-            android:background="@color/white"
-            android:text="Tipo de documento"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_tdocumento"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
@@ -94,7 +65,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_documento"
+        app:layout_constraintTop_toBottomOf="@id/til_nombre"
         app:layout_constraintVertical_bias="0.0"
         app:startIconContentDescription="número de documento">
 
@@ -117,7 +88,7 @@
         android:layout_height="wrap_content"
         app:startIconDrawable="@drawable/ic_punto"
         android:layout_marginTop="8dp"
-        android:hint=" telefono"
+        android:hint=" Telefono"
         app:endIconMode="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -130,7 +101,7 @@
             android:id="@+id/tie_telefono"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="telefono"
+            android:text="Telefono"
             android:maxLines="1"
             android:enabled="false"
             android:textColor="@color/teal_200"
@@ -145,7 +116,7 @@
         android:layout_height="wrap_content"
         app:startIconDrawable="@drawable/ic_punto"
         android:layout_marginTop="8dp"
-        android:hint="email"
+        android:hint="Email"
         app:endIconMode="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -158,7 +129,7 @@
             android:id="@+id/tie_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="email"
+            android:text="Email"
             android:maxLines="1"
             android:enabled="false"
             android:textColor="@color/teal_200"
@@ -167,45 +138,44 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_sexo"
+        android:id="@+id/til_saldo"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:startIconDrawable="@drawable/ic_punto"
         android:layout_marginTop="8dp"
-        android:hint="Sexo"
+        android:hint="Saldo"
         app:endIconMode="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/til_email"
         app:layout_constraintVertical_bias="0.0"
-        app:startIconContentDescription="Sexo">
+        app:startIconContentDescription="telefono">
 
-        <AutoCompleteTextView
-            android:id="@+id/actv_sexo"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_saldo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:enabled="false"
+            android:text="Saldo"
             android:maxLines="1"
-            android:padding="8dp"
+            android:enabled="false"
             android:textColor="@color/teal_200"
             android:background="@color/white"
-            android:text="Sexo"
-            />
+            android:padding="8dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/b_editar"
+        android:id="@+id/b_historial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="16dp"
         android:backgroundTint="@color/teal_200"
-        android:text="Editar"
+        android:text="Historial de Saldos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_sexo"
-        app:layout_constraintVertical_bias="0.100000024" />
+        app:layout_constraintTop_toBottomOf="@id/til_saldo"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
