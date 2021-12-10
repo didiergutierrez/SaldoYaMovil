@@ -17,11 +17,9 @@
             android:exported="false" />
         <activity
             android:name=".Inicio"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Editar"
-            android:exported="true" />
-            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".RegistrarSaldo"
@@ -29,12 +27,10 @@
         <activity
             android:name=".RegistrarEmpleado"
             android:exported="false" />
+
         <activity
-            android:name=".Inicio"
-            android:exported="false" />
-        <activity
-            android:name=".Editar"
-            android:exported="true" />
+            android:name=".MainActivity"
+            android:exported="false"/>
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true"
