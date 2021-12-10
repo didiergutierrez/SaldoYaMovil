@@ -8,13 +8,18 @@ import android.view.View;
 import android.widget.Button;
 
 public class OpcionesReg extends AppCompatActivity {
+
     private Button b_RCliente;
+    private Button b_REmpresa;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opciones_reg);
 
         b_RCliente=findViewById(R.id.b_RCliente);
+
+
         b_RCliente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
