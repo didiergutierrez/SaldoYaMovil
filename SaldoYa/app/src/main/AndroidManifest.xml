@@ -10,13 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SaldoYa">
         <activity
+            android:name=".RegistrarSaldo"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrarEmpleado"
+            android:exported="false" />
+        <activity
             android:name=".Inicio"
-            android:exported="true">
-        </activity>
-
-        <activity android:name=".Editar"
-            android:exported="true"></activity>
-
+            android:exported="true" />
+        <activity
+            android:name=".Editar"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
