@@ -11,9 +11,8 @@
         <entry key="..\:/Users/CAMILO/AndroidStudioProjects/SaldoYaMovil/SaldoYa/app/src/main/res/layout/activity_rcliente.xml" value="0.1213768115942029" />
         <entry key="..\:/Users/CAMILO/AndroidStudioProjects/SaldoYaMovil/SaldoYa/app/src/main/res/layout/activity_registrar_empleado.xml" value="0.33" />
         <entry key="..\:/Users/CAMILO/AndroidStudioProjects/SaldoYaMovil/SaldoYa/app/src/main/res/layout/activity_registrar_saldo.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/CAMILO/AndroidStudioProjects/SaldoYaMovil/SaldoYa/app/src/main/res/layout/activity_rempresa.xml" value="0.1213768115942029" />
         <entry key="..\:/Users/CAMILO/AndroidStudioProjects/SaldoYaMovil/SaldoYa/app/src/main/res/menu/opciones.xml" value="0.18888888888888888" />
-        <entry key="..\:/Users/Jose Castilla/Documents/GitHub/proyecto/aldoYaMovil/SaldoYa/app/src/main/res/layout/activity_opciones_reg.xml" value="0.234375" />
-        <entry key="..\:/Users/Jose Castilla/Documents/GitHub/proyecto/aldoYaMovil/SaldoYa/app/src/main/res/layout/activity_rempresa.xml" value="0.23958333333333334" />
         <entry key="..\:/Users/MANUEL/AndroidStudioProjects/SaldoYa/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
         <entry key="..\:/Users/MANUEL/AndroidStudioProjects/SaldoYa/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
         <entry key="..\:/Users/MANUEL/AndroidStudioProjects/SaldoYa/app/src/main/res/layout/activity_main.xml" value="0.25" />
@@ -26,7 +25,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -10,7 +10,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     //String usuario;
     private Button b_login;
     private TextView lbl_Crear_Cuenta;
+    private Spinner sp_login;
 
 
     @Override
@@ -34,14 +37,28 @@ public class MainActivity extends AppCompatActivity {
         //Buscamos el botón y se guarda en la variable
         b_login=findViewById(R.id.b_login);
         lbl_Crear_Cuenta= findViewById(R.id.lbl_Crear_Cuenta);
+        sp_login= findViewById(R.id.sp_login);
+
+        String [] respuesta = {"Cliente", "Tienda", "Empleado"};
+        ArrayAdapter<String> adapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, respuesta);
+        sp_login.setAdapter(adapter);
 
 
         //Proceso o método al darle click al boton
         b_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,Inicio.class);
-                startActivity(intent);
+                String seleccionado = sp_login.getSelectedItem().toString();
+                if (seleccionado.equals("Cliente")){
+                    Intent intent1=new Intent(MainActivity.this, Inicio.class);
+                    startActivity(intent1);
+                }else if (seleccionado.equals("Tienda")){
+                    Intent intent2= new Intent(MainActivity.this, Inicio.class);
+                    startActivity(intent2);
+                }else {
+                    Intent intent3= new Intent(MainActivity.this, Inicio.class);
+                    startActivity(intent3);
+                }
             }
         });
 
