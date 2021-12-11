@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SaldoYa">
         <activity
+            android:name=".DetalleSaldo"
+            android:exported="false" />
+        <activity
             android:name=".R_Empresa"
             android:exported="false" />
         <activity
