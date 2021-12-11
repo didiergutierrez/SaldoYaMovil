@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.saldoya">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,8 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SaldoYa">
         <activity
-            android:name=".DetalleSaldo"
-            android:exported="false" />
+            android:name=".DetalleSaldoRv"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".R_Empresa"
             android:exported="false" />
@@ -43,11 +52,6 @@
             android:name=".SplashScreenActivity"
             android:exported="true"
             android:theme="@style/SplashScreenTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
