@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "840410856256",
+    "project_id": "saldoya-c3e6f",
+    "storage_bucket": "saldoya-c3e6f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840410856256:android:3faaa384c55bb5d21598a5",
+        "android_client_info": {
+          "package_name": "com.example.saldoya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "840410856256-ajn5pds99ri3dtre0o2k9d15m0ql7ilc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCicMLGDY9B_mnL7wB2270q4MTdzih253A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "840410856256-ajn5pds99ri3dtre0o2k9d15m0ql7ilc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class SplashScreenActivity extends AppCompatActivity {
 
     @Override
@@ -12,7 +15,13 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
 
-        iniciarNuevaActividad(MainActivity.class);
+        FirebaseUser usuario= FirebaseAuth.getInstance().getCurrentUser();
+
+        if(usuario==null){
+            iniciarNuevaActividad(MainActivity.class);
+        }else {
+            iniciarNuevaActividad(Inicio.class);
+        }
     }
 
     private void iniciarNuevaActividad(Class clase) {
