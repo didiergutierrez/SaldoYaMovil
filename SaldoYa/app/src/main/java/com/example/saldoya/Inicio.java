@@ -1,8 +1,5 @@
 package com.example.saldoya;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,6 +7,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -41,6 +41,13 @@ public class Inicio extends AppCompatActivity {
         tie_email=findViewById(R.id.tie_email);
         tie_saldo=findViewById(R.id.tie_saldo);
         b_historial=findViewById(R.id.b_historial);
+        b_historial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Inicio.this,DetalleSaldoRv.class);
+                startActivity(intent);
+            }
+        });
 
         //Visualizar los textos(modificar)
         tie_nombre.setText(nombre);
