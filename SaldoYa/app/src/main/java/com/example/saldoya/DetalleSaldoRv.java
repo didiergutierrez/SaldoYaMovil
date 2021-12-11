@@ -50,12 +50,12 @@ public class DetalleSaldoRv extends AppCompatActivity {
 
 
 
-//        saldos = new ArrayList<Saldo>();
-//        saldos.add(new Saldo("1","1","1026301447","23", "12-12-2021"));
-//        saldos.add(new Saldo("2","12","1026329983","3", "12-12-2021"));
-//        saldos.add(new Saldo("3","3","1026223333","10", "12-12-2021"));
-//        saldos.add(new Saldo("4","4","1026301447","30", "12-12-2021"));
-//        saldos.add(new Saldo("5","1","1026301447","45", "12-12-2021"));
+        saldos = new ArrayList<Saldo>();
+        saldos.add(new Saldo("1","1026301447","23", "12-12-2021"));
+        saldos.add(new Saldo("2","1026329983","3", "12-12-2021"));
+        saldos.add(new Saldo("3","1026223333","10", "12-12-2021"));
+        saldos.add(new Saldo("4","1026301447","30", "12-12-2021"));
+        saldos.add(new Saldo("5","1026301447","45", "12-12-2021"));
 
         adaptadorListAdapter= new ListAdapter(this, saldos);
 

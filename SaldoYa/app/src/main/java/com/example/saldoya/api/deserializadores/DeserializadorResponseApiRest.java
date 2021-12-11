@@ -41,10 +41,9 @@ public class DeserializadorResponseApiRest implements JsonDeserializer<SaldoResp
             String especie= jsonObject.get(JsonKeysApiRest.MEDIA_ESPECIES).getAsString();
 
 
-            String fecha="11-12-2021";
+
             Saldo saldo= new Saldo();
             saldo.setId(id);
-            saldo.setFecha(fecha);
             saldo.setCedula(nombre);
             saldo.setSaldo(especie);
             saldoArrayList.add(saldo);
