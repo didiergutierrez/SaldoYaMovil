@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".RegistrarSaldo"
     android:id="@+id/cl_registrar_saldo"
-    android:background="@drawable/logo"
     android:padding="8dp">
 
     <com.google.android.material.textview.MaterialTextView

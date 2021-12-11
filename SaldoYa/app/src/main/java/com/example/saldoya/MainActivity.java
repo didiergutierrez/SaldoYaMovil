@@ -21,7 +21,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    //String usuario;
+    private String nombre="";
+    private TextView et_usuario, et_clave;
     private Button b_login;
     private TextView lbl_Crear_Cuenta;
     private Spinner sp_login;
@@ -35,11 +36,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Buscamos el botón y se guarda en la variable
+        et_usuario= findViewById(R.id.et_usuario);
+        et_clave= findViewById(R.id.et_clave);
         b_login=findViewById(R.id.b_login);
         lbl_Crear_Cuenta= findViewById(R.id.lbl_Crear_Cuenta);
         sp_login= findViewById(R.id.sp_login);
 
-        String [] respuesta = {"Cliente", "Tienda", "Empleado"};
+        String [] respuesta = {"Cliente", "Tienda"};
         ArrayAdapter<String> adapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, respuesta);
         sp_login.setAdapter(adapter);
 
@@ -50,14 +53,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String seleccionado = sp_login.getSelectedItem().toString();
                 if (seleccionado.equals("Cliente")){
+                    nombre= et_usuario.getText().toString();
                     Intent intent1=new Intent(MainActivity.this, Inicio.class);
+                    intent1.putExtra("nombre",nombre);
                     startActivity(intent1);
-                }else if (seleccionado.equals("Tienda")){
-                    Intent intent2= new Intent(MainActivity.this, Inicio.class);
-                    startActivity(intent2);
                 }else {
-                    Intent intent3= new Intent(MainActivity.this, Inicio.class);
-                    startActivity(intent3);
+                    Intent intent2= new Intent(MainActivity.this, RegistrarSaldo.class);
+                    startActivity(intent2);
                 }
             }
         });
