@@ -1,4 +1,4 @@
-package com.example.saldoya;
+package com.example.saldoya.ingelecron.com.example.saldoya;
 
 import org.junit.Test;
 
