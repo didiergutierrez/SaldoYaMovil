@@ -16,13 +16,7 @@
         android:theme="@style/Theme.SaldoYa">
         <activity
             android:name=".DetalleSaldoRv"
-            android:exported="true"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="false">
         </activity>
 
         <activity
@@ -56,6 +50,11 @@
             android:name=".SplashScreenActivity"
             android:exported="true"
             android:theme="@style/SplashScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

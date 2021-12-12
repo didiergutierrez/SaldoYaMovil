@@ -16,5 +16,9 @@
         android:title="Configuración"
         android:orderInCategory="3"
         app:showAsAction="never" />
+    <item android:id="@+id/salir"
+        android:title="Salir"
+        android:orderInCategory="4"
+        app:showAsAction="never" />
 
 </menu>

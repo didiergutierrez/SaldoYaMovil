@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.example.saldoya.controladores.LoginControlador;
 import com.example.saldoya.utiles.ValidarCorreo;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,18 +65,7 @@ public class MainActivity extends AppCompatActivity {
         b_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LoginControlador.login(MainActivity.this, getUsiario(), getClave());
-                String seleccionado = sp_login.getSelectedItem().toString();
-                if (seleccionado.equals("Cliente")){
-                    LoginControlador.login(MainActivity.this, getUsiario(), getClave());
-                    nombre= et_usuario.getText().toString();
-                    Intent intent1=new Intent(MainActivity.this, Inicio.class);
-                    intent1.putExtra("nombre",nombre);
-                    startActivity(intent1);
-                }else {
-                    Intent intent2= new Intent(MainActivity.this, RegistrarSaldo.class);
-                    startActivity(intent2);
-                }
+                LoginControlador.login(MainActivity.this, getUsiario(), getClave(),getTipo());
             }
         });
 
@@ -126,32 +116,13 @@ public class MainActivity extends AppCompatActivity {
         return et_clave.getText().toString();
     }
 
-    /*@Override
+    private String getTipo(){return sp_login.getSelectedItem().toString();}
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.opciones, menu);
         return true;
     }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        Intent intent;
-        switch (item.getItemId()){
-            case R.id.informacion:
-                Toast.makeText(this, "Información", Toast.LENGTH_LONG).show();
-                return true;
-            case R.id.contacto:
-                intent= new Intent(this, Contactenos.class);
-                startActivity(intent);
-                return true;
-            case R.id.configuracion:
-                Toast.makeText(this, "Configuración", Toast.LENGTH_LONG).show();
-
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }*/
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -159,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
 
         et_usuario.clearFocus();
         et_clave.clearFocus();
+        sp_login.clearFocus();
 
         return true;
     }
