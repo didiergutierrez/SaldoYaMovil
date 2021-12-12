@@ -67,13 +67,13 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListAdapterVie
 
         holder.tv_fecha.setText(saldo.getFecha());
         holder.tv_valor.setText(saldo.getSaldo());
-        holder.tv_tienda.setText(saldo.getIdTienda());
+        holder.tv_tienda.setText(saldo.getCedula());
 
     }
 
     @Override
     public int getItemCount() {
-        return saldoArrayList.size();
+        return 2;
     }
 
 }

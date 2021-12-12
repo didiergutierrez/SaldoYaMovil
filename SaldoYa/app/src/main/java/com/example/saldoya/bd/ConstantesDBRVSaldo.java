@@ -9,5 +9,6 @@ public class ConstantesDBRVSaldo {
     public static final String T_SALDOS_IDTIENDA = "idTienda";
     public static final String T_SALDOS_CEDULA = "cedula";
     public static final String T_SALDOS_SALDO = "saldo";
+    public static final String T_SALDOS_FECHA = "fecha";
 
 }

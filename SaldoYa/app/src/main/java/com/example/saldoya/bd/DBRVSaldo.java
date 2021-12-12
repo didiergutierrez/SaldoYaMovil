@@ -13,11 +13,11 @@ import com.example.saldoya.bd.modelo.Saldo;
 
 import java.util.ArrayList;
 
-public class DVRVSaldo extends SQLiteOpenHelper {
+public class DBRVSaldo extends SQLiteOpenHelper {
 
     private Context contexto;
 
-    public DVRVSaldo(@Nullable Context context) {
+    public DBRVSaldo(@Nullable Context context) {
         super(context, ConstantesDBRVSaldo.NOMBRE_DB, null, ConstantesDBRVSaldo.VERSION_DB);
         this.contexto=context;
     }
@@ -27,10 +27,9 @@ public class DVRVSaldo extends SQLiteOpenHelper {
 
         String sqlCrearTablaSaldo= "CREATE TABLE "+ConstantesDBRVSaldo.T_SALDOS +"(" +
                 ConstantesDBRVSaldo.T_SALDOS_ID +" INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                ConstantesDBRVSaldo.T_SALDOS_IDTIENDA +" TEXT," +
                 ConstantesDBRVSaldo.T_SALDOS_CEDULA +" TEXT, " +
-                ConstantesDBRVSaldo.T_SALDOS_SALDO +" TEXT " +
-//
+                ConstantesDBRVSaldo.T_SALDOS_SALDO +" TEXT, " +
+                ConstantesDBRVSaldo.T_SALDOS_FECHA +" TEXT " +
                 ")";
 
         db.execSQL(sqlCrearTablaSaldo);
@@ -43,7 +42,7 @@ public class DVRVSaldo extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public ArrayList<Saldo> leerSaldo() {
+    public ArrayList<Saldo> leerSaldos() {
 
         ArrayList<Saldo> SaldoArrayList = new ArrayList<>();
 
@@ -57,9 +56,8 @@ public class DVRVSaldo extends SQLiteOpenHelper {
 
                 Saldo saldo= new Saldo();
                 saldo.setId(String.valueOf(recorridoSaldo.getInt(0)));
-                saldo.setIdTienda(recorridoSaldo.getString(1));
-                saldo.setCedula(recorridoSaldo.getString(2));
-                saldo.setSaldo(recorridoSaldo.getString(3));
+                saldo.setCedula(recorridoSaldo.getString(1));
+                saldo.setSaldo(recorridoSaldo.getString(2));
 //                saldo.setCorreo(recorridoSaldo.getString(4));
 
                 SaldoArrayList.add(saldo);
