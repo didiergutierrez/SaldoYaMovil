@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Inicio extends AppCompatActivity {
 
@@ -97,8 +98,11 @@ public class Inicio extends AppCompatActivity {
                 return true;
             case R.id.configuracion:
                 Toast.makeText(this, "Configuración", Toast.LENGTH_LONG).show();
-
                 return true;
+            case R.id.salir:
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(Inicio.this,MainActivity.class));
+
             default:
                 return super.onOptionsItemSelected(item);
         }
